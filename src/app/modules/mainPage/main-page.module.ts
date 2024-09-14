@@ -8,13 +8,16 @@ import {MatCardModule} from '@angular/material/card';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatDividerModule} from '@angular/material/divider';
+import { FilterComponent } from './components/filter/filter.component';
 
 
 @NgModule({
   declarations: [
     TodoListComponent,
     GridPageComponent,
-    TodoCardComponent
+    TodoCardComponent,
+    FilterComponent
   ],
   imports: [
     CommonModule,
@@ -22,12 +25,14 @@ import {MatChipsModule} from '@angular/material/chips';
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDividerModule
 
   ],
   exports: [
     TodoListComponent,
-    GridPageComponent
+    GridPageComponent,
+    FilterComponent
   ]
 })
 export class MainPageModule { }
