@@ -13,7 +13,8 @@ export class GridPageComponent{
   constructor(private dialog: MatDialog, private todoService: TodoService){}
 
   openDialog() {
-    const dialogRef = this.dialog.open(AddEditModalComponent);
+    const dialogRef  = this.dialog.open(AddEditModalComponent, {
+      data: { mode: 'add'}});
 
     dialogRef.afterClosed().subscribe(result => {
       this.todoService.addTodo(result);

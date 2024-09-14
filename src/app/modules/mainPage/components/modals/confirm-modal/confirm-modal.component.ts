@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'confirm-modal',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ConfirmModalComponent {
 
+  constructor(public dialogRef: MatDialogRef<ConfirmModalComponent>) {}
+
+  onNoClick(){
+    this.dialogRef.close(false);
+  }
+
+  onYesClick(){
+    this.dialogRef.close(true);
+  }
 }
