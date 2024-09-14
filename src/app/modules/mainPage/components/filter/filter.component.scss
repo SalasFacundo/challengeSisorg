@@ -1,0 +1,96 @@
+
+.radio-container{
+  color: white;
+}
+
+.title{
+color: #FEF985;
+margin-bottom: 15px;
+}
+
+#sort-container{
+  margin-right: 70px;
+}
+
+#filter-container{
+  display: flex;
+  justify-content: center;
+  width: 700px;
+}
+
+#all-container{
+
+  margin-top: 60px;
+  color: #FEF985;
+  width: 100%;
+}
+
+
+
+#all-delete, #all-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+}
+
+
+input[type='radio'] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+#checkbox{
+  margin-right: 10px;
+  transform: scale(1.5);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  #reset-filters{
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    color: #FEF985;
+    cursor: pointer;
+  }
+}
+
+#options-container{
+  display: flex;
+  justify-content: center;
+}
+
+#status-options, #priority-options{
+  display: flex;
+  justify-content: center;
+  .pill{
+    margin: 15px;
+    width: auto;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+  }
+
+  #low{
+    background-color: #b0f2a8;
+  }
+  #medium{
+    background-color: #e9e684;
+  }
+  #high{
+    background-color: #df5454;
+  }
+
+  #new{
+    background-color: #afc9e2;
+  }
+  #in-progress{
+    background-color: #e2d4af;
+  }
+  #completed{
+    background-color: #afe2c4;
+  }
+}

@@ -1,0 +1,56 @@
+.container{
+
+  mat-card{
+    background-color: #171717;
+    padding: 20px;
+    border-radius: 30px 30px 30px 30px;
+
+    #checkox-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #checkbox{
+        transform: scale(1.5);
+      }
+    }
+
+    #progress{
+      background-color: #afc9e2;
+      margin-right: 20px;
+    }
+
+    #title{
+      color: #FEF985;
+    }
+
+    #description{
+      color: white;
+    }
+
+    #date{
+      text-align: end;
+      color: white;
+    }
+
+    #actions-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #edit, #delete{
+        display: flex;
+        justify-content: center;
+        color: #FEF985;
+      }
+    }
+  }
+
+  .pill{
+    margin-bottom: 15px;
+    width: auto;
+    background-color: red;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+}

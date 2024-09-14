@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#title {
+  text-align: center;
+  margin: 100px 0;
+  font-size: 50px;
+  color: #FEF985;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 570px;
+  margin-bottom: 100px; /* Espacio inferior al todo-list */
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px; /* Ajustar el espacio entre los filtros y la lista */
+}
+
+#add-todo {
+  position: fixed;
+  bottom: 20px;  /* Espacio desde la parte inferior de la página */
+  right: 20px;   /* Espacio desde el borde derecho */
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #FEF985;
+  border: none;
+  cursor: pointer;
+}
