@@ -1,4 +1,13 @@
 <div class="container">
+  <div class="row col-12" id="all-container">
+    <div class="col-6" id="all-check" (click)="onClickAllCompleted()">
+      <mat-icon>check</mat-icon>
+      All completed
+    </div>
+    <div class="col-6" id="all-delete" (click)="onClickAllDelete()">
+      Delete All <mat-icon>delete</mat-icon>
+    </div>
+  </div>
   <div *ngFor="let todo of todos" class="todo-card">
     <todo-card [data]="todo"></todo-card>
   </div>

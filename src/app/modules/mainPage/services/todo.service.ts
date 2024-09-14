@@ -89,4 +89,17 @@ export class TodoService {
     const todos = this.getTodosFromLocalStorage();
     this.todosSubject.next(todos);
   }
+
+  markAllAsCompleted(): void {
+    const todos = this.getTodosFromLocalStorage();
+    const updatedTodos = todos.map(todo => ({
+      ...todo,
+      status: Status.COMPLETED
+    }));
+    this.saveTodosToLocalStorage(updatedTodos);
+  }
+
+  deleteAllTodos(): void {
+    this.saveTodosToLocalStorage([]);
+  }
 }

@@ -6,3 +6,17 @@
   font-size: 20px;
   color: #fef985;
 }
+
+#all-container{
+  margin-bottom: 60px;
+  color: #FEF985;
+  width: 100%;
+}
+
+#all-delete, #all-check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: end;
+  cursor: pointer;
+}
