@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditModalComponent } from '../../components/modals/add-edit-modal/add-edit-modal.component';
 import { TodoService } from '../../services/todo.service';
