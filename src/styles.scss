@@ -3,7 +3,7 @@
 html,
 body {
   height: 100%;
-  background-color: #171717 !important;
+  background-color: black !important;
 }
 
 body {
@@ -14,73 +14,3 @@ body {
   border: none !important;
 }
 
-.mat-form-field-appearance-fill .mat-form-field-flex{
-  border-bottom: 2px solid #fef985 !important;
-}
-
-.mat-form-field-appearance-fill .mat-form-field-flex{
-  padding: 0 !important;
-}
-
-#mat-calendar-button-1{
-  color: rgb(0, 0, 0) !important;
-}
-
-.mat-icon-button{
-  color: #fef985 !important;
-}
-
-/* .mat-calendar{
-  background-color: #2f2f2f;
-  color: white;
-}
-
-.mat-calendar-content,.mat-calendar-content-body-label{
-  color: white !important;
-}
-
-.mat-calendar-table-header{
-  color: white;
-}
-
-.mat-calendar-body-label{
-  color: white;
-}
-
-::ng-deep .mat-calendar-body-cell-content{
-  color: white !important;
-}
-
-.mat-calendar-body-cell{
-  color: red !important;
-} */
-
-
-.mat-calendar-header{
-  background-color: red;
-  display: none;
-}
-.mat-calendar-content{
-  margin-top: 45px;
-}
-
-
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-
-
-.custom-snackbar {
-  background-color: #742727;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-}
-.custom-snackbar .mat-simple-snackbar {
-  justify-content: center;
-}
-
-.p-inputgroup{
-  display: flex;
-  justify-content: center !important;
-}

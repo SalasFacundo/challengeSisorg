@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mecanogame": {
+    "challengeSisorg": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mecanogame",
+            "outputPath": "dist/challengeSisorg",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -83,10 +83,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "mecanogame:build:production"
+              "buildTarget": "challengeSisorg:build:production"
             },
             "development": {
-              "buildTarget": "mecanogame:build:development"
+              "buildTarget": "challengeSisorg:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,7 +94,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "mecanogame:build"
+            "buildTarget": "challengeSisorg:build"
           }
         },
         "test": {

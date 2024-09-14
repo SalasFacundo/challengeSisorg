@@ -1,20 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatTableModule} from '@angular/material/table';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { GridPageComponent } from './pages/grid-page/grid-page.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import { TodoCardComponent } from './components/todo-card/todo-card.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 @NgModule({
   declarations: [
-    TodoListComponent
+    TodoListComponent,
+    GridPageComponent,
+    TodoCardComponent
   ],
   imports: [
     CommonModule,
-    MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatChipsModule
+
   ],
   exports: [
-    TodoListComponent
+    TodoListComponent,
+    GridPageComponent
   ]
 })
 export class MainPageModule { }
