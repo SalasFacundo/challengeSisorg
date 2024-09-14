@@ -1,16 +1,6 @@
 <div class="container">
-  <div class="todo-card">
-    <todo-card></todo-card>
+  <div *ngFor="let todo of todos" class="todo-card">
+    <todo-card [data]="todo"></todo-card>
   </div>
-  <div class="todo-card">
-    <todo-card></todo-card>
-  </div>
-  <div class="todo-card">
-    <todo-card></todo-card>
-  </div>
-  <div class="todo-card">
-    <todo-card></todo-card>
-  </div>
-
-
+  <div *ngIf="todos.length === 0" id="message">There is no todo's create someone.</div>
 </div>

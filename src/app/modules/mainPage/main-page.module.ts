@@ -6,18 +6,25 @@ import { GridPageComponent } from './pages/grid-page/grid-page.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import { FilterComponent } from './components/filter/filter.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddEditModalComponent } from './components/modals/add-edit-modal/add-edit-modal.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
     TodoListComponent,
     GridPageComponent,
     TodoCardComponent,
-    FilterComponent
+    FilterComponent,
+    AddEditModalComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +33,13 @@ import { FilterComponent } from './components/filter/filter.component';
     MatCardModule,
     MatFormFieldModule,
     MatChipsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   exports: [
