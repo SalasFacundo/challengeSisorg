@@ -2,7 +2,7 @@
 
 This ToDo List application, developed in Angular, provides efficient task management. Users can add, edit, and delete tasks, as well as filter and sort them by status priority, or date. The app uses localStorage for data persistence and BehaviorSubject for real-time state management. SCSS styling ensures a user-friendly and functional interface.
 
-## Características
+## characteristics
 
 
 - Add tasks to do.
@@ -10,7 +10,8 @@ This ToDo List application, developed in Angular, provides efficient task manage
 - Filter or sort tasks by date and priority (Low, Medium, High)
 
 
-## Tecnologías utilizadas
+## technologies used
+
 
 **Front-end:** Html, Scss, TypeScript, Angular, Angular material.<br>
-**Persistencia de datos** Local Storage.
+**Data persistence** Local Storage.
