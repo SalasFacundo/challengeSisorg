@@ -1,37 +1,49 @@
 <div class="container">
-  <div class="row" id="filter-container">
-    <div class="col-3" id="sort-container">
-      <div class="row">
-        <div class="title">Sort by:</div>
-      </div>
-      <div class="row radio-container">
-        <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByDate()">Date</div>
-        <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByPriority()">Priority</div>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="row">
-        <div class="title">Filter by:</div>
-      </div>
-      <div class="row radio-container">
-        <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('status')">Status</div>
-        <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('priority')">Priority</div>
-      </div>
-      <div class="row" id="options-container">
-        <div *ngIf="selectedOption=='status'" class="row" id="status-options">
-          <div class="pill" id="new" (click)="filterByStatus(Status.NEW)">New</div>
-          <div class="pill" id="in-progress" (click)="filterByStatus(Status.IN_PROGRESS)">In progress</div>
-          <div class="pill" id="completed" (click)="filterByStatus(Status.COMPLETED)">Completed</div>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+        <mat-panel-description align="end">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="row" id="filter-container">
+        <div class="col-3" id="sort-container">
+          <div class="row">
+            <div class="title">Sort by:</div>
+          </div>
+          <div class="row radio-container">
+            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByDate()">Date</div>
+            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByPriority()">Priority</div>
+          </div>
         </div>
-        <div *ngIf="selectedOption=='priority'" class="row" id="priority-options">
-          <div class="pill" id="low" (click)="filterByPriority(Priority.LOW)">Low</div>
-          <div class="pill" id="medium" (click)="filterByPriority(Priority.MEDIUM)">Medium</div>
-          <div class="pill" id="high" (click)="filterByPriority(Priority.HIGH)">High</div>
+        <div class="col-3">
+          <div class="row">
+            <div class="title">Filter by:</div>
+          </div>
+          <div class="row radio-container">
+            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('status')" #statusRadio>Status</div>
+            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('priority')" #priorityRadio>Priority</div>
+          </div>
+          <div class="row" id="options-container">
+            <div *ngIf="selectedOption=='status'" class="row" id="status-options">
+              <div class="pill" id="new" (click)="filterByStatus(Status.NEW)">New</div>
+              <div class="pill" id="in-progress" (click)="filterByStatus(Status.IN_PROGRESS)">In progress</div>
+              <div class="pill" id="completed" (click)="filterByStatus(Status.COMPLETED)">Completed</div>
+            </div>
+            <div *ngIf="selectedOption=='priority'" class="row" id="priority-options">
+              <div class="pill" id="low" (click)="filterByPriority(Priority.LOW)">Low</div>
+              <div class="pill" id="medium" (click)="filterByPriority(Priority.MEDIUM)">Medium</div>
+              <div class="pill" id="high" (click)="filterByPriority(Priority.HIGH)">High</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row" id="reset-filters" (click)="resetFilters()">
-    Reset Filters
-  </div>
+      <div class="row" id="reset-filters" (click)="resetFilters()">
+        Reset Filters
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Status } from '../../enums/status';
 import { TodoService } from '../../services/todo.service';
 import { Priority } from '../../enums/priority';
@@ -11,6 +11,9 @@ import { Priority } from '../../enums/priority';
 export class FilterComponent {
 
   constructor(private todoService: TodoService){}
+
+  @ViewChild('statusRadio') statusRadio!: ElementRef<HTMLInputElement>;
+  @ViewChild('priorityRadio') priorityRadio!: ElementRef<HTMLInputElement>;
 
   selectedOption: string = '';
 
@@ -38,6 +41,13 @@ export class FilterComponent {
   }
 
   resetFilters(): void{
+    if (this.statusRadio) {
+      this.statusRadio.nativeElement.checked = false;
+    }
+    if (this.priorityRadio) {
+      this.priorityRadio.nativeElement.checked = false;
+    }
     this.todoService.resetFilters();
+    this.selectedOption = '';
   }
 }

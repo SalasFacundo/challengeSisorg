@@ -16,7 +16,6 @@
     }
 
     #progress{
-      background-color: #afc9e2;
       margin-right: 20px;
     }
 
@@ -42,6 +41,10 @@
         display: flex;
         justify-content: center;
         color: #FEF985;
+
+        mat-icon{
+          cursor: pointer;
+        }
       }
     }
   }
@@ -52,5 +55,12 @@
     background-color: red;
     border-radius: 10px 10px 10px 10px;
   }
+
+  .status-new{background-color: #afc9e2;}
+  .status-inProgress{background-color: #e2d4af}
+  .status-completed{background-color: #afe2c4}
+  .priority-low{background-color: #b0f2a8}
+  .priority-medium{background-color: #e9e684}
+  .priority-high{background-color: #df5454}
 
 }

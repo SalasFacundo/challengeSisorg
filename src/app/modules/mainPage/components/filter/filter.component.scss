@@ -29,10 +29,27 @@ input[type='radio'] {
   flex-direction: column;
   justify-content: end;
 
+  .mat-expansion-panel-header, .mat-expansion-panel{
+    background-color: #171717;
+
+    mat-panel-description{
+      display: flex;
+      justify-content: end;
+      mat-icon{
+        color: #FEF985 ;
+      }
+    }
+
+  }
+
+  mat-panel-title{
+
+    color: #FEF985 !important;
+  }
   #reset-filters{
-    margin: auto;
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
-    text-align: center;
     color: #FEF985;
     cursor: pointer;
   }

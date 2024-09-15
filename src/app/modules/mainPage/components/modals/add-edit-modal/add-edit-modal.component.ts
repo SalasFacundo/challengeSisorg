@@ -30,6 +30,9 @@ export class AddEditModalComponent {
     this.initVars();
   }
 
+  /**
+   * Builds the form.
+   */
   buildForm(): void {
     this.taskForm = this.fb.group({
       title: ['', Validators.required],
@@ -40,6 +43,10 @@ export class AddEditModalComponent {
     });
   }
 
+  /**
+   * Sets values in the form of selected task just if the modal was opened in edit mode.
+   * @param todo The ToDo item to set in the form. If undefined, the form will remain empty.
+   */
   setFormValues(todo: ToDo | undefined): void {
     this.taskForm.patchValue({
       title: todo?.title,
@@ -50,6 +57,11 @@ export class AddEditModalComponent {
     });
   }
 
+  /**
+   * Initializes variables and sets form values based on the modal mode.
+   * - If the mode is 'edit', it fetches the ToDo item by ID and sets the form values.
+   * - If the mode is 'add', it sets the title for adding a new ToDo item.
+   */
   initVars(): void {
     if(this.data.mode == 'edit'){
       this.title = "Edit TO-DO";
@@ -60,12 +72,18 @@ export class AddEditModalComponent {
     }
   }
 
+   /**
+   * Closes the modal and passes the form value if the form is valid.
+   */
   onSave(): void {
     if (this.taskForm.valid) {
       this.dialogRef.close(this.taskForm.value);
     }
   }
 
+   /**
+   * Closes the modal without passing any data.
+   */
   onCancel(): void {
     this.dialogRef.close();
   }

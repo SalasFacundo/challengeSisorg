@@ -1,10 +1,24 @@
 h1{
   text-align: center;
+  color: #fef985;
 }
 
+#subtitle{
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
 button{
   border: 1px solid black;
-  margin-top: 30px;
   padding: 5px;
-  margin-right: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #fef985;
+}
+::ng-deep mat-dialog-container{
+
+  background-color: #303030 !important;
+}
+.container{
+  padding: 10px 50px;
 }

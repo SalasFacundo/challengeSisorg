@@ -19,12 +19,18 @@ export class TodoListComponent implements OnInit {
 
   constructor( private todoService: TodoService, private dialog: MatDialog){}
 
+  /**
+   * Initializes the component by fetching the list of TODOS from the service.
+   */
   ngOnInit(): void {
     this.todoService.getTodos().subscribe( response => {
       this.todos = response;
     })
   }
 
+   /**
+   * Opens a confirmation modal and marks all ToDo items as completed if confirmed.
+   */
   onClickAllCompleted(): void {
     this.dialogRef  = this.dialog.open(ConfirmModalComponent);
     this.dialogRef.afterClosed().subscribe(result => {
@@ -34,6 +40,9 @@ export class TodoListComponent implements OnInit {
     });
   }
 
+   /**
+   * Opens a confirmation modal and deletes all ToDo items if confirmed.
+   */
   onClickAllDelete(): void {
     this.dialogRef  = this.dialog.open(ConfirmModalComponent);
     this.dialogRef.afterClosed().subscribe(result => {
@@ -42,6 +51,4 @@ export class TodoListComponent implements OnInit {
       }
     });
   }
-
-
 }

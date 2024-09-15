@@ -12,6 +12,11 @@ export class GridPageComponent{
 
   constructor(private dialog: MatDialog, private todoService: TodoService){}
 
+  /**
+ * Opens a dialog for adding a new ToDo item.
+ * The dialog is initialized with the mode set to 'add'.
+ * After the dialog is closed, the result (new ToDo item) is passed to the TodoService to be added.
+ */
   openDialog() {
     const dialogRef  = this.dialog.open(AddEditModalComponent, {
       data: { mode: 'add'}});
