@@ -21,23 +21,25 @@
 .todo-list {
   width: 100%;
   max-width: 570px;
-  margin-bottom: 100px; /* Espacio inferior al todo-list */
+  margin-bottom: 100px;
 }
 
 .filter {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 50px; /* Ajustar el espacio entre los filtros y la lista */
+  margin-bottom: 50px;
 }
 
 #add-todo {
   position: fixed;
-  bottom: 20px;  /* Espacio desde la parte inferior de la página */
-  right: 20px;   /* Espacio desde el borde derecho */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #FEF985;
   border: none;
   cursor: pointer;
+  width: 20%;
 }

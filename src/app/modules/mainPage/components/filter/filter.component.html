@@ -15,8 +15,8 @@
             <div class="title">Sort by:</div>
           </div>
           <div class="row radio-container">
-            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByDate()">Date</div>
-            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByPriority()">Priority
+            <div class="col-6"><input type="radio" name="sort" value="date" (change)="sortByDate()">Date</div>
+            <div class="col-6"><input type="radio" name="sort" value="priority" (change)="sortByPriority()">Priority
             </div>
           </div>
         </div>
@@ -26,22 +26,22 @@
               <div class="title">Filter by:</div>
             </div>
             <div class="row radio-container">
-              <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('status')"
+              <div class="col-6"><input type="radio" name="sort" value="status" (change)="onFilterChange('status')"
                   #statusRadio>Status</div>
-              <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('priority')"
+              <div class="col-6"><input type="radio" name="sort" value="priority" (change)="onFilterChange('priority')"
                   #priorityRadio>Priority</div>
             </div>
           </div>
           <div class="row" id="options-container">
             <div *ngIf="selectedOption=='status'" class="row" id="status-options">
-              <div class="pill" id="new" (click)="filterByStatus(Status.NEW)">New</div>
-              <div class="pill" id="in-progress" (click)="filterByStatus(Status.IN_PROGRESS)">In progress</div>
-              <div class="pill" id="completed" (click)="filterByStatus(Status.COMPLETED)">Completed</div>
+              <div class="pill" id="new" (click)="filterByStatus(Status.NEW)">NEW</div>
+              <div class="pill" id="in-progress" (click)="filterByStatus(Status.IN_PROGRESS)">IN PROGRESS</div>
+              <div class="pill" id="completed" (click)="filterByStatus(Status.COMPLETED)">COMPLETED</div>
             </div>
             <div *ngIf="selectedOption=='priority'" class="row" id="priority-options">
-              <div class="pill" id="low" (click)="filterByPriority(Priority.LOW)">Low</div>
-              <div class="pill" id="medium" (click)="filterByPriority(Priority.MEDIUM)">Medium</div>
-              <div class="pill" id="high" (click)="filterByPriority(Priority.HIGH)">High</div>
+              <div class="pill" id="low" (click)="filterByPriority(Priority.LOW)">LOW</div>
+              <div class="pill" id="medium" (click)="filterByPriority(Priority.MEDIUM)">MEDIUM</div>
+              <div class="pill" id="high" (click)="filterByPriority(Priority.HIGH)">HIGH</div>
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
-h1{
+h1 {
   color: #fef985;
 }
 
-button{
+button {
   border: 1px solid black;
   padding: 5px;
   border-radius: 5px;
@@ -10,31 +10,34 @@ button{
   background-color: #fef985;
 }
 
-  ::ng-deep mat-dialog-container{
-    background-color: #303030 !important;
-  }
+::ng-deep mat-dialog-container {
+  background-color: #303030 !important;
+}
 
-  ::ng-deep .mat-focused .mat-form-field-label {
-    color: white !important;
-   }
+::ng-deep .mat-focused .mat-form-field-label {
+  color: white !important;
+}
 
-  ::ng-deep.mat-form-field-underline{
-    background-color: #fef985 !important;
-  }
+::ng-deep.mat-form-field-underline {
+  background-color: #fef985 !important;
+}
 
-  ::ng-deep .mat-form-field-label {
-    color: white !important;
-  }
+::ng-deep .mat-form-field-label {
+  color: white !important;
+}
 
-  ::ng-deep .mat-expansion-indicator:after {
+::ng-deep .mat-expansion-indicator:after {
+  color: white;
+}
+
+mat-form-field {
+  input {
     color: white;
   }
 
-  mat-form-field {
-    input {
-      color: white;
-    }
-    select {
-      color: white;
-    }
+  select {
+    color: white;
   }
+}
+
+

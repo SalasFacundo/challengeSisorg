@@ -64,11 +64,11 @@ export class AddEditModalComponent {
    */
   initVars(): void {
     if(this.data.mode == 'edit'){
-      this.title = "Edit TO-DO";
+      this.title = "Edit task";
       let todo = this.todoService.getTodoById(this.data.todoId);
       this.setFormValues(todo);
     } else if(this.data.mode=='add'){
-      this.title = "Add TO-DO";
+      this.title = "Add task";
     }
   }
 
