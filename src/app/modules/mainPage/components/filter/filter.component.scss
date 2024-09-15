@@ -1,6 +1,10 @@
-
 .radio-container{
   color: white;
+
+  .col-6{
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 .title{
@@ -15,7 +19,6 @@ margin-bottom: 15px;
 #filter-container{
   display: flex;
   justify-content: center;
-  width: 700px;
 }
 
 
@@ -29,7 +32,7 @@ input[type='radio'] {
   flex-direction: column;
   justify-content: end;
 
-  .mat-expansion-panel-header, .mat-expansion-panel{
+  .mat-expansion-panel-header, .mat-expansion-panel, .mat-expansion-panel-header:hover{
     background-color: #171717;
 
     mat-panel-description{
@@ -62,10 +65,11 @@ input[type='radio'] {
 
 #status-options, #priority-options{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   .pill{
+    text-align: center;
     margin: 15px;
-    width: auto;
+    width: 95px;
     border-radius: 10px 10px 10px 10px;
     cursor: pointer;
   }
@@ -89,4 +93,10 @@ input[type='radio'] {
   #completed{
     background-color: #afe2c4;
   }
+}
+
+
+#filterby-container{
+  display: flex;
+  justify-content: center;
 }

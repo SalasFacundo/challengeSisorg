@@ -16,16 +16,21 @@
           </div>
           <div class="row radio-container">
             <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByDate()">Date</div>
-            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByPriority()">Priority</div>
+            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="sortByPriority()">Priority
+            </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="row">
-            <div class="title">Filter by:</div>
-          </div>
-          <div class="row radio-container">
-            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('status')" #statusRadio>Status</div>
-            <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('priority')" #priorityRadio>Priority</div>
+        <div class="col-3 temporal">
+          <div class="row" id="filterby-container">
+            <div class="row">
+              <div class="title">Filter by:</div>
+            </div>
+            <div class="row radio-container">
+              <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('status')"
+                  #statusRadio>Status</div>
+              <div class="col-6"><input type="radio" name="sort" value="opcion1" (change)="onFilterChange('priority')"
+                  #priorityRadio>Priority</div>
+            </div>
           </div>
           <div class="row" id="options-container">
             <div *ngIf="selectedOption=='status'" class="row" id="status-options">
