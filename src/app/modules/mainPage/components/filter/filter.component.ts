@@ -25,10 +25,12 @@ export class FilterComponent {
   }
 
   sortByDate(): void{
+    this.resetFilters();
     this.todoService.sortByDate();
   }
 
   sortByPriority(): void{
+    this.resetFilters();
     this.todoService.sortByPriority();
   }
 
